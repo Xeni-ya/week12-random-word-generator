@@ -8,19 +8,22 @@
 let alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
 
 const getRandomIndex = () => {
-  let randomIndexOne = Math.floor(Math.random() * alphabet.length);
-  let randomIndexTwo = Math.floor(Math.random() * alphabet.length);
-  let randomIndexThree = Math.floor(Math.random() * alphabet.length);
-  let randomIndexFour = Math.floor(Math.random() * alphabet.length);
+  return Math.floor(Math.random() * alphabet.length);
 }
+let randomIndexOne = getRandomIndex();
+let randomIndexTwo = getRandomIndex();
+let randomIndexThree = getRandomIndex();
+let randomIndexFour = getRandomIndex();
 
 //console.log('эспрессо'[0]);
 const getRandomWord = () => {
+
   let randomWordOne = alphabet[randomIndexOne];
   let randomWordTwo = alphabet[randomIndexTwo];
   let randomWordThree = alphabet[randomIndexThree];
   let randomWordFour = alphabet[randomIndexFour];
 
-  result = randomWordOne + randomWordTwo + randomWordThree + randomWordFour;
+  let result = randomWordOne + randomWordTwo + randomWordThree + randomWordFour;
+  return result;
 }
-console.log(getRandomWord(`случайное слово: ${result}`));
+console.log(getRandomWord());
